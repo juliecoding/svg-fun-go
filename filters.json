@@ -1,0 +1,35 @@
+{
+    "dawn": {
+        "filter": {
+            "id": "blendingTest",
+            "filterEffects": [
+                {
+                    "which": "feFlood",
+                    "floodColor": "#EFB2D1",
+                    "floodOpacity": "0.75",
+                    "result": "floodOut"
+                },
+                {
+                    "which": "feBlend",
+                    "mode": "multiply",
+                    "in": "SourceGraphic",
+                    "in2": "floodOut"
+                }
+            ]
+        }
+    },
+    "dusk": {
+        "filter": {
+
+        }
+    },
+    "midday": {
+
+    },
+    "night": {
+
+    },
+    "very_late_at_night": {
+
+    }
+}
