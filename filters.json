@@ -18,13 +18,13 @@
             ]
         }
     },
+    "midday": {
+
+    },
     "dusk": {
         "filter": {
 
         }
-    },
-    "midday": {
-
     },
     "night": {
 

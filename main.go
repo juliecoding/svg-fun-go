@@ -1,5 +1,5 @@
 package main
-	
+
 import (
 	"os"
 	"github.com/juliecoding/svg-fun-go/cli"

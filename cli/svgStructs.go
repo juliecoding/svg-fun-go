@@ -13,14 +13,6 @@ type FilterPrimitiveAttributes struct {
 	Result 	string	`json:"result"`	// Defines the assigned name for this filter primitive
 }
 
-type GlobalAttributes struct {
-	CoreAttributes
-	FilterPrimitiveAttributes
-	PresentationAttributes
-	Class 	string	`json:"class"`
-	Style 	string	`json:"style"`
-}
-
 type PresentationAttributes struct {
 	AlignmentBaseline			string	`json:"alignmentBaseline"`
 	BaselineShift 				string	`json:"baselineShift"`
@@ -86,14 +78,22 @@ type PresentationAttributes struct {
 	WritingMode					string	`json:"writingMode"`
 }
 
+type GlobalAttributes struct {
+	Class 	string	`json:"class"`
+	Style 	string	`json:"style"`
+}
+
 // TRY TO GET RID OF THE DUPLICATE FIELDS WITH FILTER EFFECT?
 type FilterElement struct {
+	CoreAttributes
+	PresentationAttributes
 	GlobalAttributes
 	FilterEffects	[]filterEffect
 }
 
 type filterEffect struct {
-	GlobalAttributes
+	CoreAttributes
+	PresentationAttributes
 	Which string	`json:"which" validate:"oneof=feBlend feColorMatrix feComponentTransfer feComposite feConvolveMatrix feDiffuseLighting feDisplacementMap feDistantLight feFlood feGaussianBlur feImage feMerge feMorphology feOffset fePointLight feSpecularLighting feSpotLight feTile feTurbulence"`
 }
 
@@ -154,7 +154,7 @@ type FeDistantLight struct {
 	Elevation	string	`json:"elevation" validate:"numeric"`
 }
 
-type FeFlood struct { 
+type FeFlood struct {
 	FloodColor		string `json:"floodColor"`
 	FloodOpacity	string `json:"floodOpacity"`
 }
