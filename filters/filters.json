@@ -1,0 +1,34 @@
+{
+    "cloudy": {
+        "id": "__cloudy",
+        "filterEffects": [
+            {
+                "which": "feColorMatrix",
+                "type": "saturate",
+                "in": "SourceGraphic",
+                "values": 0.3
+            }
+        ]
+    },
+    "carlton": {},
+    "matrix": {},
+    "moodring": {},
+    "dawn": {
+        "id": "__dawn",
+        "filterEffects": [
+            {
+                "which": "feFlood",
+                "floodColor": "#EFB2D1",
+                "floodOpacity": "0.75",
+                "result": "floodOut",
+                "id": "__feFlood1"
+            },
+            {
+                "which": "feBlend",
+                "mode": "multiply",
+                "in": "SourceGraphic",
+                "in2": "floodOut"
+            }
+        ]
+    }
+}

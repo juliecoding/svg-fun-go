@@ -1,0 +1,11 @@
+{
+    "id": "__cloudy",
+    "filterEffects": [
+        {
+            "which": "feColorMatrix",
+            "type": "saturate",
+            "in": "SourceGraphic",
+            "values": 0.3
+        }
+    ]
+}

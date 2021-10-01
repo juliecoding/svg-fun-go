@@ -106,7 +106,7 @@ type FeBlend struct {
 type FeColorMatrix struct {
 	In		string	`json:"in"`
 	Type	string	`json:"type" validate:"oneof=matrix saturate hueRotate luminanceToAlpha"`
-	Values	string
+	Values	float64
 }
 
 type FeComponentTransfer struct {
